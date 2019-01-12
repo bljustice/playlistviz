@@ -1,0 +1,15 @@
+# base image
+FROM python:3.6.7-alpine
+
+# set working directory
+WORKDIR /usr/src/app
+
+# copy and install requirements
+COPY ./requirements.txt /usr/src/app/requirements.txt
+RUN pip install -r requirements.txt
+
+# copy app
+COPY . /usr/src/app
+
+# run flask server
+CMD flask run --host=0.0.0.0

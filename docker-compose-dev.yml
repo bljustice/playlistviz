@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  shops:
+    build:
+      context: ./services/shops
+      dockerfile: Dockerfile-dev
+    volumes:
+      - './services/shops:/usr/src/app'
+    ports:
+        - 5001:5000
+    environment:
+      - FLASK_APP=shopanalytics.py
+      - FLASK_ENV=development
+      - APP_SETTINGS=app.config.DevConfig
