@@ -3,16 +3,16 @@ class BaseConfig:
     TESTING = False
 
 
-class DevelopmentConfig(BaseConfig):
+class DevConfig(BaseConfig):
     """Development configuration"""
     pass
 
 
-class TestingConfig(BaseConfig):
+class TestConfig(BaseConfig):
     """Testing configuration"""
     TESTING = True
 
 
-class ProductionConfig(BaseConfig):
+class ProdConfig(BaseConfig):
     """Production configuration"""
     pass
