@@ -10,6 +10,6 @@ services:
     ports:
         - 5001:5000
     environment:
-      - FLASK_APP=shopanalytics.py
+      - FLASK_APP=playlistviz.py
       - FLASK_ENV=development
       - APP_SETTINGS=app.config.DevConfig
