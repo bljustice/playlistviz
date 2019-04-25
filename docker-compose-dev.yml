@@ -1,14 +1,16 @@
 version: '3.7'
 
 services:
-  shops:
+  playlists:
     build:
-      context: ./services/shops
+      context: ./services/playlists
       dockerfile: Dockerfile-dev
     volumes:
-      - './services/shops:/usr/src/app'
+      - './services/playlists:/usr/src/app'
     ports:
         - 5001:5000
+    env_file:
+      - ./.env
     environment:
       - FLASK_APP=playlistviz.py
       - FLASK_ENV=development
