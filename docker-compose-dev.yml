@@ -11,7 +11,7 @@ services:
     ports:
       - 3007:3000
     env_file:
-      - './services/client/.env'
+      - ./services/client/.env
     environment:
       - NODE_ENV=development
   playlists:

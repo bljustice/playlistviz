@@ -9,7 +9,8 @@ class App extends React.Component {
 
   getAudioDetails() {
     fetch(`${process.env.REACT_APP_AUDIO_DETAILS_URL}/api/v1/user-playlist`)
-      .then(r => { console.log(r.json()); })
+      .then(r => { return r.json() })
+      .then(json => { console.log(JSON.stringify(json)); })
       .catch(e => { console.log(e); });
   }
 
