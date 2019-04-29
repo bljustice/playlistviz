@@ -5,3 +5,7 @@
 #playlist-id-form {
   padding-top: 50%;
 }
+
+#radar-graph-row {
+  height: 400px;
+}

@@ -22,8 +22,10 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
+    "@nivo/radar": "^0.56.2",
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
+    "nivo": "^0.31.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-dom": "^16.8.6"

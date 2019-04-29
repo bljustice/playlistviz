@@ -1,6 +1,7 @@
 import React from 'react';
 import TopNav from './components/TopNav';
 import PlaylistIdForm from './components/PlaylistIdForm';
+import Radar from './components/Radar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -23,7 +24,7 @@ class App extends React.Component {
 
   getAudioDetails(playlistId) {
     event.preventDefault();
-    
+
     const payload = {
       playlistId: playlistId
     }
@@ -67,6 +68,9 @@ class App extends React.Component {
           </Col>
           <Col>
           </Col>
+        </Row>
+        <Row id='radar-graph-row'>
+          <Radar data={this.state.data} />
         </Row>
       </Container>
     );
