@@ -1,7 +1,9 @@
+import functools
 from app import app
 from flask import jsonify, request
 from .utils.api_helpers import get_audio_features
 
+@functools.lru_cache(maxsize=30)
 @app.route('/api/v1/user-playlist', methods=['POST'])
 def user_playlist():
     request_json = request.get_json()

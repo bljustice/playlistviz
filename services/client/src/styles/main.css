@@ -6,6 +6,15 @@
   padding-top: 50%;
 }
 
-#radar-graph-row {
+#radar-chart-container {
   height: 400px;
+  text-align: center;
+  margin-top: 15%;
+}
+
+.spinner-border {
+  margin-left: 50%;
+  margin-top: 5%;
+  width: 4rem;
+  height: 4rem;
 }

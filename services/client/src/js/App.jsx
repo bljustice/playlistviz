@@ -1,6 +1,7 @@
 import React from 'react';
 import TopNav from './components/TopNav';
 import PlaylistIdForm from './components/PlaylistIdForm';
+import LoadingSpinner from './components/LoadingSpinner';
 import Radar from './components/Radar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -15,7 +16,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       data: {},
-      playlistId: ''
+      playlistId: '',
+      loading: false
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -34,7 +36,8 @@ class App extends React.Component {
 
     axios.post(audioDetailsEndpoint, payload)
       .then(r => this.setState({
-        data: r.data
+        data: r.data,
+        loading: false
       }))
       .catch(error => console.log(error));
   }
@@ -47,6 +50,7 @@ class App extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({loading: true});
     this.getAudioDetails(this.state.playlistId);
   }
 
@@ -69,8 +73,11 @@ class App extends React.Component {
           <Col>
           </Col>
         </Row>
-        <Row id='radar-graph-row'>
-          <Radar data={this.state.data} />
+        <LoadingSpinner loading={this.state.loading} />
+        <Row id="radar-graph-row">
+          <Col>
+            <Radar data={this.state.data} />
+          </Col>
         </Row>
       </Container>
     );
