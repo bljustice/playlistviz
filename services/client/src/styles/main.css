@@ -18,7 +18,7 @@
 }
 
 #aggregation-duration_ms {
-  background-color: #EF3D59;
+  background-color: #866ec7;
   text-align: center;
   margin-top: 7%;
   padding-top: 5%;
@@ -28,7 +28,7 @@
 }
 
 #aggregation-count {
-  background-color: #E17A47;
+  background-color: #82acff;
   text-align: center;
   margin-top: 7%;
   padding-top: 5%;
@@ -38,7 +38,7 @@
 }
 
 #aggregation-tempo {
-  background-color: #EFC958;
+  background-color: #b7fbff;
   text-align: center;
   margin-top: 7%;
   padding-top: 5%;
