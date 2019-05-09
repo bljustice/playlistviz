@@ -21,7 +21,11 @@ const PlaylistIdForm = (props) => {
           You can locate a Spotify Playlist ID like this:
         </Form.Text>
       </Form.Group>
-      <Button onClick={props.onSubmit} variant="primary" type="submit">
+      <Button
+        variant="secondary"
+        onClick={props.onSubmit}
+        type="submit"
+      >
         Search
       </Button>
     </Form>

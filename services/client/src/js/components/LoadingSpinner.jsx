@@ -12,7 +12,7 @@ const LoadingSpinner = (props) => {
       </Row>
     );
   }
-  return <Row></Row>
+  return <Row id="spinner-row"></Row>
 }
 
 export default LoadingSpinner;

@@ -1,11 +1,6 @@
 import React from 'react';
 import { ResponsiveRadar } from '@nivo/radar';
-
-const mean = (data, key) => {
-  const vals = data.map(x => x[key]);
-  const sum = vals.reduce((x, y) => x + y);
-  return parseFloat(sum / vals.length).toFixed(3);
-}
+import { mean } from '../utils'
 
 const makeRadarData = (data) => {
   const metrics = [
@@ -23,20 +18,21 @@ const makeRadarData = (data) => {
 
 const Radar = (props) => {
   if (!props.data.length) {
-    return <div></div>
+    return <div></div>;
   }
   return (
     <div id='radar-chart-container'>
       <h3>Audio Features</h3>
       <ResponsiveRadar
         data={makeRadarData(props.data)}
+        colors="#4AB19D"
         keys={['playlist']}
         indexBy="metric"
         maxValue="auto"
         margin={{
           "top": 70,
           "right": 80,
-          "bottom": 40,
+          "bottom": 60,
           "left": 80
         }}
         curve="linearClosed"
@@ -46,7 +42,7 @@ const Radar = (props) => {
         }}
         gridLevels={1}
         gridShape="circular"
-        gridLabelOffset={36}
+        gridLabelOffset={15}
         enableDots={true}
         dotSize={10}
         dotColor={{
@@ -59,10 +55,7 @@ const Radar = (props) => {
         enableDotLabel={true}
         dotLabel="value"
         dotLabelYOffset={-12}
-        colors={{
-          "scheme": "nivo"
-        }}
-        fillOpacity={0.25}
+        fillOpacity={0.60}
         blendMode="multiply"
         animate={true}
         motionStiffness={90}

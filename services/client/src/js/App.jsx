@@ -2,10 +2,12 @@ import React from 'react';
 import TopNav from './components/TopNav';
 import PlaylistIdForm from './components/PlaylistIdForm';
 import LoadingSpinner from './components/LoadingSpinner';
+import Aggregation from './components/Aggregation';
 import Radar from './components/Radar';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { mean, meanTimeDuration } from './utils'
 const axios = require('axios');
 
 import '../styles/main.css';
@@ -74,7 +76,33 @@ class App extends React.Component {
           </Col>
         </Row>
         <LoadingSpinner loading={this.state.loading} />
-        <Row id="radar-graph-row">
+        <Row id="data-row1">
+          <Col>
+            <Aggregation
+              data={this.state.data}
+              description="Average Song Duration"
+              dataKey={"duration_ms"}
+              func={meanTimeDuration}
+            />
+          </Col>
+          <Col>
+            <Aggregation
+              data={this.state.data}
+              description="Song Count"
+              dataKey="count"
+              func="count"
+            />
+          </Col>
+          <Col>
+            <Aggregation
+              data={this.state.data}
+              description="Average Tempo"
+              dataKey={"tempo"}
+              func={mean}
+              />
+          </Col>
+        </Row>
+        <Row id="data-row2">
           <Col>
             <Radar data={this.state.data} />
           </Col>
