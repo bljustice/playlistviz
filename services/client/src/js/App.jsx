@@ -4,6 +4,7 @@ import PlaylistIdForm from './components/PlaylistIdForm';
 import LoadingSpinner from './components/LoadingSpinner';
 import Aggregation from './components/Aggregation';
 import Radar from './components/Radar';
+import SliderLogo from './components/SliderLogo';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -61,6 +62,15 @@ class App extends React.Component {
       <Container>
         <Row>
           <TopNav />
+        </Row>
+        <Row id="slider-logo-row">
+          <Col>
+          </Col>
+          <Col>
+            <SliderLogo />
+          </Col>
+          <Col>
+          </Col>
         </Row>
         <Row id="playlist-row">
           <Col>
