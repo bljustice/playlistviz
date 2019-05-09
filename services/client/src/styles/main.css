@@ -1,0 +1,63 @@
+#slider-logo-row {
+  margin-top: 8%;
+  text-align: center;
+}
+
+#playlist-viz-header {
+  margin-bottom: 5%;
+}
+
+#playlist-row {
+  padding-top: 12%;
+}
+
+#radar-chart-container {
+  height: 500px;
+  text-align: center;
+  margin-top: 15%;
+}
+
+#aggregation-duration_ms {
+  background-color: #866ec7;
+  text-align: center;
+  margin-top: 7%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#aggregation-count {
+  background-color: #82acff;
+  text-align: center;
+  margin-top: 7%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+#aggregation-tempo {
+  background-color: #b7fbff;
+  text-align: center;
+  margin-top: 7%;
+  padding-top: 5%;
+  padding-bottom: 2%;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.spinner-border {
+  margin-left: 50%;
+  margin-top: 5%;
+  width: 4rem;
+  height: 4rem;
+}
+
+#data-row1 {
+  margin-top: 5%;
+}
+
+#metric-title {
+  padding-top: 10%;
+}
