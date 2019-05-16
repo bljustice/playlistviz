@@ -116,6 +116,14 @@ class App extends React.Component {
           <Col>
             <Radar data={this.state.data} />
           </Col>
+          <Col>
+            <Aggregation
+              data={this.state.data}
+              description="Average Valence"
+              dataKey={"valence"}
+              func={mean}
+            />
+          </Col>
         </Row>
       </Container>
     );

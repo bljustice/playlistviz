@@ -25,7 +25,7 @@ const Radar = (props) => {
       <h3>Audio Features</h3>
       <ResponsiveRadar
         data={makeRadarData(props.data)}
-        colors="#8f71ff"
+        colors="#747572"
         keys={['playlist']}
         indexBy="metric"
         maxValue="auto"
