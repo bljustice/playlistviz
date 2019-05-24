@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "pretest": "eslint .",
     "start": "webpack-dev-server --config ./webpack.dev.js --mode development"
   },
   "author": "bljustice",
@@ -15,6 +15,8 @@
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
+    "eslint": "^5.16.0",
+    "eslint-plugin-react": "^7.13.0",
     "react-hot-loader": "^4.8.4",
     "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
