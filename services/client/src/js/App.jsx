@@ -20,6 +20,7 @@ class App extends React.Component {
     this.state = {
       data: {},
       playlistId: '',
+      playlistImageLink: '',
       loading: false
     };
     this.handleChange = this.handleChange.bind(this);
@@ -36,6 +37,7 @@ class App extends React.Component {
 
     const serviceEndpoint = `${process.env.REACT_APP_AUDIO_DETAILS_URL}`
     const audioDetailsEndpoint = serviceEndpoint.concat('/api/v1/user-playlist')
+    const playlistImgEndpoint = serviceEndpoint.concat('/api/v1/get-playlist-cover-image')
 
     axios.post(audioDetailsEndpoint, payload)
       .then(r => this.setState({
@@ -43,6 +45,14 @@ class App extends React.Component {
         loading: false
       }))
       .catch(error => console.log(error));
+
+
+    axios.post(playlistImgEndpoint, payload)
+    .then(r => this.setState({
+      playlistImageLink: r.data[0].url,
+    }))
+    .catch(error => console.log(error));
+
   }
 
   handleChange(event) {
@@ -86,6 +96,11 @@ class App extends React.Component {
           </Col>
         </Row>
         <LoadingSpinner loading={this.state.loading} />
+        <Row id="data-row0">
+          <Col>
+            <img src={this.state.playlistImageLink} />
+          </Col>
+        </Row>
         <Row id="data-row1">
           <Col>
             <Aggregation
