@@ -64,6 +64,11 @@
   height: 4rem;
 }
 
+#data-row0 {
+  margin-top: 5%;
+  text-align: center;
+}
+
 #data-row1 {
   margin-top: 5%;
 }

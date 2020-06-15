@@ -31,3 +31,11 @@ def _get_track_ids(sp, username, playlist_id):
         track_ids = map(lambda k: k['track'].get('id'), track_metadata)
         return list(track_ids)
     return []
+
+def get_playlist_cover_image(playlist_id):
+    sp = _build_auth()
+    cover_img_json = sp.playlist_cover_image(playlist_id)
+    print(cover_img_json)
+    if cover_img_json:
+        return cover_img_json
+    return {}
